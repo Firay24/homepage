@@ -65,9 +65,13 @@ const Header = () => {
       zIndex={999}
     >
       <HStack paddingX={10} paddingY={4} color={headerTextColor}>
+        {/* logo */}
         <Image width="250px" src={imageUrl} alt="logo avatar" />
+
         <Spacer />
+
         {isMobile ? (
+          // components navbar in mobile size
           <>
             {isMenuOpen ? (
               <Stack
@@ -95,6 +99,8 @@ const Header = () => {
                 </Stack>
               </Stack>
             ) : null}
+
+            {/* button to open/close menu item in mobile size */}
             <Button
               alignItems="center"
               onClick={toggleMenu}
@@ -107,6 +113,7 @@ const Header = () => {
             </Button>
           </>
         ) : (
+          // navbar components in tab or desktop size
           <HStack gap={8} color={scrolling ? "black" : "white"}>
             <ItemOfMenu title="Home" />
             <ItemOfMenu title="About" />

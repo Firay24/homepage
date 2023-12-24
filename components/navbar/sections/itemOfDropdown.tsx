@@ -1,8 +1,10 @@
+// lbrary style
 import { Text } from "@chakra-ui/react";
 import { Dropdown, Space } from "antd";
-import React from "react";
 
+// icon
 import { IoIosArrowDown } from "react-icons/io";
+
 // data
 import items from "../util/data";
 
