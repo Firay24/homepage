@@ -1,23 +1,15 @@
 "use client";
+
 // library style
 import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-  Box,
   Button,
   HStack,
   Image,
   Spacer,
   Stack,
-  Text,
   useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { Dropdown, Space } from "antd";
-import type { MenuProps } from "antd";
 
 // state from react
 import { useEffect, useState } from "react";
@@ -25,17 +17,21 @@ import { useEffect, useState } from "react";
 // icons
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
-import { IoIosArrowDown } from "react-icons/io";
 
 // assets
 import LogoImg from "@/assets/logo.png";
 
+// components
+import ItemOfMenu from "./sections/itemOfMenu";
+import ItemOfAccordion from "./sections/itemOfAccordion";
+import ItemOfDropdown from "./sections/itemOfDropdown";
+
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = useBreakpointValue({ base: true, md: false });
   const headerBgColor = useColorModeValue("white", "gray.800");
   const headerTextColor = useColorModeValue("black", "white");
-  const isMobile = useBreakpointValue({ base: true, md: false });
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const imageUrl: string = LogoImg.src as string;
 
   // handler isScroll?
@@ -58,45 +54,6 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const items: MenuProps["items"] = [
-    {
-      key: "sma",
-      label: (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.antgroup.com"
-        >
-          SMA
-        </a>
-      ),
-    },
-    {
-      key: "smp",
-      label: (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.antgroup.com"
-        >
-          SMP
-        </a>
-      ),
-    },
-    {
-      key: "sd",
-      label: (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.antgroup.com"
-        >
-          SD
-        </a>
-      ),
-    },
-  ];
 
   return (
     <Stack
@@ -131,35 +88,10 @@ const Header = () => {
                   color={scrolling || isMobile ? "black" : "white"}
                   marginTop={10}
                 >
-                  <Text as={"a"} href="/">
-                    Home
-                  </Text>
-                  <Text>About</Text>
-                  <Accordion allowMultiple>
-                    <AccordionItem border={"none"}>
-                      <h2>
-                        <AccordionButton
-                          justifyContent={"center"}
-                          alignItems={"center"}
-                        >
-                          <HStack>
-                            <Box as="span" flex="1" textAlign="left">
-                              Category
-                            </Box>
-                            <AccordionIcon />
-                          </HStack>
-                        </AccordionButton>
-                      </h2>
-                      <AccordionPanel pb={4}>
-                        <Stack>
-                          <Text>SMA</Text>
-                          <Text>SMP</Text>
-                          <Text>SD</Text>
-                        </Stack>
-                      </AccordionPanel>
-                    </AccordionItem>
-                  </Accordion>
-                  <Text>Contact</Text>
+                  <ItemOfMenu title="Home" isMobile />
+                  <ItemOfMenu title="About" isMobile />
+                  <ItemOfAccordion />
+                  <ItemOfMenu title="Contact" isMobile />
                 </Stack>
               </Stack>
             ) : null}
@@ -176,41 +108,10 @@ const Header = () => {
           </>
         ) : (
           <HStack gap={8} color={scrolling ? "black" : "white"}>
-            <Stack
-              _hover={{ backgroundColor: "#7879F1" }}
-              padding={2}
-              rounded={"md"}
-            >
-              <Text as={"a"} href="/">
-                Home
-              </Text>
-            </Stack>
-            <Stack
-              _hover={{ backgroundColor: "#7879F1" }}
-              padding={2}
-              rounded={"md"}
-            >
-              <Text as={"a"} href="/">
-                About
-              </Text>
-            </Stack>
-            <Dropdown menu={{ items }}>
-              <Text cursor={"pointer"} onClick={(e) => e.preventDefault()}>
-                <Space>
-                  Category
-                  <IoIosArrowDown />
-                </Space>
-              </Text>
-            </Dropdown>
-            <Stack
-              _hover={{ backgroundColor: "#7879F1" }}
-              padding={2}
-              rounded={"md"}
-            >
-              <Text as={"a"} href="/">
-                Contact
-              </Text>
-            </Stack>
+            <ItemOfMenu title="Home" />
+            <ItemOfMenu title="About" />
+            <ItemOfDropdown />
+            <ItemOfMenu title="Contact" />
           </HStack>
         )}
       </HStack>
