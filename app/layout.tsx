@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import { Providers } from "./providers";
+
+// component
 import Navbar from "@/components/navbar";
+import FooterSection from "@/components/footer";
+
+// library style
 import { Stack } from "@chakra-ui/react";
 
 const inter = DM_Sans({
@@ -26,11 +31,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <Stack gap={0} marginBottom={20}>
+          <Stack gap={0}>
             <Stack>
               <Navbar />
             </Stack>
             <Stack>{children}</Stack>
+            <Stack>
+              <FooterSection />
+            </Stack>
           </Stack>
         </Providers>
       </body>
