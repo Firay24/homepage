@@ -25,6 +25,7 @@ import LogoImg from "@/assets/logo.png";
 import ItemOfMenu from "./sections/itemOfMenu";
 import ItemOfAccordion from "./sections/itemOfAccordion";
 import ItemOfDropdown from "./sections/itemOfDropdown";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -33,6 +34,7 @@ const Header = () => {
   const headerBgColor = useColorModeValue("white", "gray.800");
   const headerTextColor = useColorModeValue("black", "white");
   const imageUrl: string = LogoImg.src as string;
+  const location = usePathname();
 
   // handler isScroll?
   const handleScroll = () => {
@@ -89,7 +91,11 @@ const Header = () => {
                 </Stack>
                 <Stack
                   gap={8}
-                  color={scrolling || isMobile ? "black" : "white"}
+                  color={
+                    scrolling || isMobile || location !== "/"
+                      ? "black"
+                      : "white"
+                  }
                   marginTop={10}
                 >
                   <ItemOfMenu title="Home" isMobile />
@@ -114,7 +120,10 @@ const Header = () => {
           </>
         ) : (
           // navbar components in tab or desktop size
-          <HStack gap={8} color={scrolling ? "black" : "white"}>
+          <HStack
+            gap={8}
+            color={scrolling || location !== "/" ? "black" : "white"}
+          >
             <ItemOfMenu title="Home" />
             <ItemOfMenu title="About" />
             <ItemOfDropdown />
