@@ -6,6 +6,7 @@ import HeroSection from "./sections/hero";
 import PointSections from "./sections/points";
 import ModulSection from "./sections/modul";
 import AboutSection from "./sections/about";
+import TeamSections from "./sections/team";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <PointSections />
       <ModulSection />
       <AboutSection />
+      <TeamSections />
     </Stack>
   );
 }

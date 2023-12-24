@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <Stack gap={0} marginBottom={10}>
+          <Stack gap={0} marginBottom={20}>
             <Stack>
               <Navbar />
             </Stack>

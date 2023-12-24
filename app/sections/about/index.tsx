@@ -1,7 +1,11 @@
+// library style
 import { Grid, GridItem, HStack, Heading, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import React from "react";
+
+// assets
 import SenseiImg from "@/assets/sensei.png";
+
+// icons
 import { HiArrowLongRight } from "react-icons/hi2";
 
 const AboutSection = () => {
@@ -12,9 +16,12 @@ const AboutSection = () => {
       alignItems={"center"}
       paddingRight={10}
     >
+      {/* image section */}
       <GridItem>
         <Image width={650} src={SenseiImg} alt="guru avatar" />
       </GridItem>
+
+      {/* content text section */}
       <GridItem paddingLeft={{ base: 10, md: 0 }}>
         <Stack gap={3}>
           <Text fontSize={"20px"} color={"primary.100"}>
