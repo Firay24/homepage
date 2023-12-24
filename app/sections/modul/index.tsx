@@ -14,7 +14,12 @@ interface CardModulProps {
 
 const ModulSection = () => {
   return (
-    <Stack marginTop={10} justifyContent={"center"} alignItems={"center"}>
+    <Stack
+      marginTop={20}
+      justifyContent={"center"}
+      alignItems={"center"}
+      gap={5}
+    >
       <Heading fontSize={"30px"}>Our Featured and Past Project</Heading>
       <Button
         backgroundColor="primary.100"
@@ -26,7 +31,7 @@ const ModulSection = () => {
 
       {/* module card components */}
       <Grid
-        marginTop={5}
+        marginTop={8}
         gap={5}
         templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
       >

@@ -14,7 +14,7 @@ interface DataItemsProps {
 
 const PointSections = () => {
   return (
-    <Stack marginTop={5}>
+    <Stack marginTop={15}>
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(4, 1fr)" }}
         paddingX={10}

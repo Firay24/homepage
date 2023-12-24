@@ -5,6 +5,7 @@ import { Stack } from "@chakra-ui/react";
 import HeroSection from "./sections/hero";
 import PointSections from "./sections/points";
 import ModulSection from "./sections/modul";
+import AboutSection from "./sections/about";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <PointSections />
       <ModulSection />
+      <AboutSection />
     </Stack>
   );
 }
