@@ -8,7 +8,8 @@ const CardBenefit = () => {
       rounded={"xl"}
       borderColor={"gray.500"}
       padding={4}
-      width={"262px"}
+      minWidth={"262px"}
+      width={"full"}
     >
       <Stack gap={0}>
         <Stack>
@@ -45,27 +46,6 @@ const CardBenefit = () => {
           </Grid>
         </Stack>
       </Stack>
-      {/* <HStack>
-        <Stack
-          textAlign={"center"}
-          alignItems={"center"}
-          justifyContent={"center"}
-        >
-          <Text fontSize={"22px"}>
-            <FaRegFileLines />
-          </Text>
-        </Stack>
-        <Stack>
-          <Text fontSize={"20px"} fontWeight={"semibold"}>
-            Manfaat
-          </Text>
-        </Stack>
-      </HStack>
-      <Stack>
-        <Text color={"primary.300"} fontSize={"14px"}>
-          Pelajari dasar bahasa pemrograman, functional programming.
-        </Text>
-      </Stack> */}
     </Stack>
   );
 };
