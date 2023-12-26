@@ -1,22 +1,21 @@
-// assets
 import imgSD from "@/assets/sd.jpg";
 import imgSMP from "@/assets/smp.jpg";
 import imgSMA from "@/assets/sma.jpg";
 
 export const dataItems = [
   {
-    title: "SD",
+    id: "sd",
+    title: "Modul Belajar SD",
     imgSrc: imgSD,
-    path: "sd",
   },
   {
-    title: "SMP",
+    id: "smp",
+    title: "Modul Belajar SMP",
     imgSrc: imgSMP,
-    path: "smp",
   },
   {
-    title: "SMA",
+    id: "sma",
+    title: "Modul Belajar SMA",
     imgSrc: imgSMA,
-    path: "sma",
   },
 ];

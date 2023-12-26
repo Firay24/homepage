@@ -13,7 +13,6 @@ import Image from "next/image";
 
 // assets
 import HeroImg from "@/assets/heroModule.png";
-import imgSD from "@/assets/sd.jpg";
 
 // icon
 import { PiMedal } from "react-icons/pi";
@@ -21,7 +20,22 @@ import { PiMedal } from "react-icons/pi";
 // component
 import CardBenefit from "./cardBenefit";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  title?: string;
+  imgSrc?: any;
+}
+
+const HeroSection = ({ title, imgSrc }: HeroSectionProps) => {
+  const handleDownload = () => {
+    const fileUrl = "http://localhost:3000/modul.pdf";
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.setAttribute("download", "modul.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <Stack>
       <Stack position={"relative"} height={"fit-content"} paddingBottom={5}>
@@ -56,7 +70,7 @@ const HeroSection = () => {
               <GridItem rowSpan={{ md: 2, lg: 0 }} height={"100%"}>
                 <Stack
                   width={{ base: "100%", md: "auto", lg: "200px" }}
-                  height={{ base: "200px", md: "full", lg: "200px" }}
+                  height={{ base: "250px", md: "full", lg: "200px" }}
                   position={"relative"}
                   rounded={"xl"}
                 >
@@ -69,7 +83,7 @@ const HeroSection = () => {
                   >
                     {/* <Text>Fira</Text> */}
                     <Image
-                      src={imgSD}
+                      src={imgSrc}
                       alt="murid sd"
                       layout={"fill"}
                       objectFit="cover"
@@ -82,7 +96,7 @@ const HeroSection = () => {
               {/* text section */}
               <GridItem colSpan={{ base: 0, md: 2, lg: 3 }}>
                 <Stack width={{ base: "full", md: "90%" }}>
-                  <Heading>Modul Belajar SD</Heading>
+                  <Heading>{title}</Heading>
                   <Text>
                     Pelajari dasar bahasa pemrograman, functional programming,
                     object-oriented programming (OOP), serta concurrency dengan
@@ -114,6 +128,7 @@ const HeroSection = () => {
                       backgroundColor={"primary.100"}
                       color={"white"}
                       _hover={{ backgroundColor: "primary.200" }}
+                      onClick={handleDownload}
                     >
                       Download
                     </Button>
