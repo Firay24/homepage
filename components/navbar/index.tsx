@@ -26,6 +26,7 @@ import ItemOfMenu from "./sections/itemOfMenu";
 import ItemOfAccordion from "./sections/itemOfAccordion";
 import ItemOfDropdown from "./sections/itemOfDropdown";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -68,11 +69,13 @@ const Header = () => {
     >
       <HStack paddingX={10} paddingY={4} color={headerTextColor}>
         {/* logo */}
-        <Image
-          width={{ base: "50%", md: "250px" }}
-          src={imageUrl}
-          alt="logo avatar"
-        />
+        <Link href="/">
+          <Image
+            width={{ base: "50%", md: "250px" }}
+            src={imageUrl}
+            alt="logo avatar"
+          />
+        </Link>
 
         <Spacer />
 
@@ -91,7 +94,9 @@ const Header = () => {
                 height={"100vh"}
               >
                 <Stack marginTop={3} marginLeft={8}>
-                  <Image width="50%" src={imageUrl} alt="logo avatar" />
+                  <Link href="/">
+                    <Image width="50%" src={imageUrl} alt="logo avatar" />
+                  </Link>
                 </Stack>
                 <Stack
                   gap={8}
