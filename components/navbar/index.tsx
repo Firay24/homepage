@@ -90,8 +90,8 @@ const Header = () => {
                 padding={3}
                 height={"100vh"}
               >
-                <Stack>
-                  <Image width="250px" src={imageUrl} alt="logo avatar" />
+                <Stack marginTop={3} marginLeft={8}>
+                  <Image width="50%" src={imageUrl} alt="logo avatar" />
                 </Stack>
                 <Stack
                   gap={8}

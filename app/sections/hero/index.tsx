@@ -97,7 +97,7 @@ export default function HeroSection() {
       <Stack
         position="absolute"
         zIndex={100}
-        top={"30%"}
+        top={{ base: "20%", md: "30%" }}
         color={"white"}
         width={"100%"}
         justifyContent={"center"}
