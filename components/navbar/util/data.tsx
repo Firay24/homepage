@@ -1,40 +1,29 @@
 import type { MenuProps } from "antd";
+import Link from "next/link";
 
 const items: MenuProps["items"] = [
   {
     key: "sma",
     label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.antgroup.com"
-      >
+      <Link target="_blank" rel="noopener noreferrer" href="/sma">
         SMA
-      </a>
+      </Link>
     ),
   },
   {
     key: "smp",
     label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.antgroup.com"
-      >
+      <Link target="_blank" rel="noopener noreferrer" href="/smp">
         SMP
-      </a>
+      </Link>
     ),
   },
   {
     key: "sd",
     label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.antgroup.com"
-      >
+      <Link target="_blank" rel="noopener noreferrer" href="/sd">
         SD
-      </a>
+      </Link>
     ),
   },
 ];

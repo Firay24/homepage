@@ -68,7 +68,11 @@ const Header = () => {
     >
       <HStack paddingX={10} paddingY={4} color={headerTextColor}>
         {/* logo */}
-        <Image width="250px" src={imageUrl} alt="logo avatar" />
+        <Image
+          width={{ base: "50%", md: "250px" }}
+          src={imageUrl}
+          alt="logo avatar"
+        />
 
         <Spacer />
 
@@ -112,7 +116,9 @@ const Header = () => {
               onClick={toggleMenu}
               backgroundColor={"transparent"}
               color={
-                isMenuOpen || location !== "/" ? "blackAlpha.800" : "white"
+                isMenuOpen || scrolling || location !== "/"
+                  ? "blackAlpha.800"
+                  : "white"
               }
               fontSize={"25px"}
               _hover={{ backgroundColor: "transparent", color: "#7879F1" }}

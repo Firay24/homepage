@@ -10,6 +10,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 const ItemOfAccordion = () => {
   return (
@@ -27,9 +28,9 @@ const ItemOfAccordion = () => {
         </h2>
         <AccordionPanel pb={4}>
           <Stack>
-            <Text>SMA</Text>
-            <Text>SMP</Text>
-            <Text>SD</Text>
+            <Link href="/sd">SD</Link>
+            <Link href="/smp">SMP</Link>
+            <Link href="/sma">SMA</Link>
           </Stack>
         </AccordionPanel>
       </AccordionItem>

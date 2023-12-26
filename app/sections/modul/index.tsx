@@ -20,7 +20,9 @@ const ModulSection = () => {
       alignItems={"center"}
       gap={5}
     >
-      <Heading fontSize={"30px"}>Our Featured and Past Project</Heading>
+      <Heading textAlign={{ base: "center", md: "left" }} fontSize={"30px"}>
+        Our Featured and Past Project
+      </Heading>
       <Button
         backgroundColor="primary.100"
         _hover={{ backgroundColor: "primary.200" }}

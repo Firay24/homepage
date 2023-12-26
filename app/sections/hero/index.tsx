@@ -1,7 +1,14 @@
 "use client";
 
 // library style
-import { Image, Stack, Text, IconButton, Box } from "@chakra-ui/react";
+import {
+  Image,
+  Stack,
+  Text,
+  IconButton,
+  Box,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { useRef } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,6 +22,7 @@ import HeroImg4 from "@/assets/hero4.jpg";
 export default function HeroSection() {
   const images = [HeroImg, HeroImg2, HeroImg4];
   const sliderRef = useRef<Slider>(null);
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   // setting to image slider
   const settings = {
@@ -30,8 +38,8 @@ export default function HeroSection() {
         aria-label="Previous"
         icon={<i className="fas fa-chevron-left" />}
         onClick={() => sliderRef.current!.slickPrev()}
-        top={"50%"}
-        left={10}
+        top={{ base: "78%", md: "50%" }}
+        left={{ base: 3, md: 10 }}
         position={"absolute"}
         zIndex={999}
         backgroundColor={"transparent"}
@@ -43,8 +51,9 @@ export default function HeroSection() {
         aria-label="Next"
         icon={<i className="fas fa-chevron-right" />}
         onClick={() => sliderRef.current!.slickNext()}
-        top={"50%"}
-        right={10}
+        top={{ base: "78%", md: "50%" }}
+        right={!isMobile ? 10 : undefined}
+        left={{ base: 12, md: 10 }}
         position={"absolute"}
         zIndex={999}
         backgroundColor={"transparent"}
@@ -88,7 +97,7 @@ export default function HeroSection() {
       <Stack
         position="absolute"
         zIndex={100}
-        top={{ base: "22%", md: "30%" }}
+        top={"30%"}
         color={"white"}
         width={"100%"}
         justifyContent={"center"}
@@ -96,8 +105,8 @@ export default function HeroSection() {
       >
         {/* heading */}
         <Stack
-          width={"50%"}
-          textAlign={"center"}
+          width={{ base: "90%", md: "50%" }}
+          textAlign={{ base: "left", md: "center" }}
           fontSize={{ base: "35px", md: "50px" }}
           fontWeight={"bold"}
         >
@@ -105,7 +114,10 @@ export default function HeroSection() {
         </Stack>
 
         {/* subheading */}
-        <Stack width={"60%"} textAlign={"center"}>
+        <Stack
+          width={{ base: "90%", md: "60%" }}
+          textAlign={{ base: "left", md: "center" }}
+        >
           <Text>
             Lorem Ipsum has been the industrys standard dummy text ever since
             the 1500s, when an unknown printer took a galley of type and
