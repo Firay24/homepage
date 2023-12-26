@@ -53,15 +53,15 @@ const TabSection = () => {
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
                 The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content
-                here, content here', making it look like readable English.
+                normal distribution of letters, as opposed to using Content
+                here, content here, making it look like readable English.
               </Text>
               <Text marginTop={3}>
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
                 The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content
-                here, content here', making it look like readable English.
+                normal distribution of letters, as opposed to using Content
+                here, content here, making it look like readable English.
               </Text>
             </TabPanel>
             <TabPanel>
@@ -86,8 +86,8 @@ const TabSection = () => {
                           distracted by the readable content of a page when
                           looking at its layout. The point of using Lorem Ipsum
                           is that it has a more-or-less normal distribution of
-                          letters, as opposed to using 'Content here, content
-                          here', making it look like readable English.
+                          letters, as opposed to using Content here, content
+                          here, making it look like readable English.
                         </Text>
                         <HStack
                           color={"gray.700"}
@@ -122,7 +122,7 @@ const TabSection = () => {
                           There are many variations of passages of Lorem Ipsum
                           available, but the majority have suffered alteration
                           in some form, by injected humour, or randomised words
-                          which don't look even slightly believable.
+                          which dont look even slightly believable.
                         </Text>
                       </ListItem>
                       <ListItem>
@@ -131,7 +131,7 @@ const TabSection = () => {
                           There are many variations of passages of Lorem Ipsum
                           available, but the majority have suffered alteration
                           in some form, by injected humour, or randomised words
-                          which don't look even slightly believable.
+                          which dont look even slightly believable.
                         </Text>
                       </ListItem>
                       <ListItem>
@@ -140,7 +140,7 @@ const TabSection = () => {
                           There are many variations of passages of Lorem Ipsum
                           available, but the majority have suffered alteration
                           in some form, by injected humour, or randomised words
-                          which don't look even slightly believable.
+                          which dont look even slightly believable.
                         </Text>
                       </ListItem>
                       <ListItem>
@@ -150,7 +150,7 @@ const TabSection = () => {
                           There are many variations of passages of Lorem Ipsum
                           available, but the majority have suffered alteration
                           in some form, by injected humour, or randomised words
-                          which don't look even slightly believable.
+                          which dont look even slightly believable.
                         </Text>
                       </ListItem>
                     </OrderedList>
@@ -176,8 +176,8 @@ const TabSection = () => {
                           distracted by the readable content of a page when
                           looking at its layout. The point of using Lorem Ipsum
                           is that it has a more-or-less normal distribution of
-                          letters, as opposed to using 'Content here, content
-                          here', making it look like readable English.
+                          letters, as opposed to using Content here, content
+                          here, making it look like readable English.
                         </Text>
                         <HStack
                           color={"gray.700"}
@@ -212,7 +212,7 @@ const TabSection = () => {
                           There are many variations of passages of Lorem Ipsum
                           available, but the majority have suffered alteration
                           in some form, by injected humour, or randomised words
-                          which don't look even slightly believable.
+                          which dont look even slightly believable.
                         </Text>
                       </ListItem>
                       <ListItem>
@@ -221,7 +221,7 @@ const TabSection = () => {
                           There are many variations of passages of Lorem Ipsum
                           available, but the majority have suffered alteration
                           in some form, by injected humour, or randomised words
-                          which don't look even slightly believable.
+                          which dont look even slightly believable.
                         </Text>
                       </ListItem>
                       <ListItem>
@@ -230,7 +230,7 @@ const TabSection = () => {
                           There are many variations of passages of Lorem Ipsum
                           available, but the majority have suffered alteration
                           in some form, by injected humour, or randomised words
-                          which don't look even slightly believable.
+                          which dont look even slightly believable.
                         </Text>
                       </ListItem>
                       <ListItem>
@@ -240,7 +240,7 @@ const TabSection = () => {
                           There are many variations of passages of Lorem Ipsum
                           available, but the majority have suffered alteration
                           in some form, by injected humour, or randomised words
-                          which don't look even slightly believable.
+                          which dont look even slightly believable.
                         </Text>
                       </ListItem>
                     </OrderedList>

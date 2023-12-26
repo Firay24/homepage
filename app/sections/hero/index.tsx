@@ -107,7 +107,7 @@ export default function HeroSection() {
         {/* subheading */}
         <Stack width={"60%"} textAlign={"center"}>
           <Text>
-            Lorem Ipsum has been the industry's standard dummy text ever since
+            Lorem Ipsum has been the industrys standard dummy text ever since
             the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book.
           </Text>
