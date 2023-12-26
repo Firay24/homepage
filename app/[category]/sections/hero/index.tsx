@@ -27,7 +27,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ title, imgSrc }: HeroSectionProps) => {
   const handleDownload = () => {
-    const fileUrl = "http://localhost:3000/modul.pdf";
+    const fileUrl = "https://homepage-chi-six-45.vercel.app/modul.pdf";
     const link = document.createElement("a");
     link.href = fileUrl;
     link.setAttribute("download", "modul.pdf");
