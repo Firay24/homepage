@@ -1,4 +1,4 @@
-"use client";
+// library style
 import {
   Box,
   Button,
@@ -8,17 +8,20 @@ import {
   Heading,
   Stack,
   Text,
-  useBreakpointValue,
 } from "@chakra-ui/react";
-import HeroImg from "@/assets/heroModule.png";
 import Image from "next/image";
+
+// assets
+import HeroImg from "@/assets/heroModule.png";
 import imgSD from "@/assets/sd.jpg";
+
+// icon
 import { PiMedal } from "react-icons/pi";
+
+// component
 import CardBenefit from "./cardBenefit";
 
 const HeroSection = () => {
-  const isMobile = useBreakpointValue({ base: true, md: true, lg: false });
-  const tab = useBreakpointValue({ base: false, md: true, lg: false });
   return (
     <Stack>
       <Stack position={"relative"} height={"fit-content"} paddingBottom={5}>

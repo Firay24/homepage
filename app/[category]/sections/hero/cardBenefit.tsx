@@ -1,4 +1,7 @@
-import { Grid, GridItem, HStack, Stack, Text } from "@chakra-ui/react";
+// library style
+import { Grid, GridItem, Stack, Text } from "@chakra-ui/react";
+
+// icons
 import { FaRegFileLines } from "react-icons/fa6";
 
 const CardBenefit = () => {
@@ -12,8 +15,10 @@ const CardBenefit = () => {
       width={"full"}
     >
       <Stack gap={0}>
+        {/* row-1: icon and title */}
         <Stack>
           <Grid templateColumns={"repeat(5, 1fr)"} alignItems={"center"}>
+            {/* icon */}
             <GridItem>
               <Stack
                 textAlign={"center"}
@@ -25,6 +30,7 @@ const CardBenefit = () => {
                 </Text>
               </Stack>
             </GridItem>
+            {/* title */}
             <GridItem colSpan={4}>
               <Stack>
                 <Text fontSize={"20px"} fontWeight={"semibold"}>
@@ -34,6 +40,7 @@ const CardBenefit = () => {
             </GridItem>
           </Grid>
         </Stack>
+        {/* row-2: description */}
         <Stack>
           <Grid templateColumns={"repeat(5, 1fr)"}>
             <GridItem colSpan={4} colStart={2}>

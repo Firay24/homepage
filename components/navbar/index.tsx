@@ -111,7 +111,9 @@ const Header = () => {
               alignItems="center"
               onClick={toggleMenu}
               backgroundColor={"transparent"}
-              color={isMenuOpen ? "blackAlpha.800" : "white"}
+              color={
+                isMenuOpen || location !== "/" ? "blackAlpha.800" : "white"
+              }
               fontSize={"25px"}
               _hover={{ backgroundColor: "transparent", color: "#7879F1" }}
             >
