@@ -53,7 +53,7 @@ export default function HeroSection() {
         onClick={() => sliderRef.current!.slickNext()}
         top={{ base: "78%", md: "50%" }}
         right={!isMobile ? 10 : undefined}
-        left={{ base: 12, md: 10 }}
+        left={isMobile ? 12 : undefined}
         position={"absolute"}
         zIndex={999}
         backgroundColor={"transparent"}
