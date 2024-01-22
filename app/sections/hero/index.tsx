@@ -107,10 +107,13 @@ export default function HeroSection() {
         <Stack
           width={{ base: "90%", md: "50%" }}
           textAlign={{ base: "left", md: "center" }}
-          fontSize={{ base: "35px", md: "50px" }}
+          fontSize={{ base: "20px", md: "35px" }}
           fontWeight={"bold"}
         >
-          <Text>Lorem Ipsum is simply dummy text of the printing</Text>
+          <Text>
+            Selamat datang di situs resmi Edu-Tourism Laboratorium Enterprise
+            System and Solution Universitas Telkom!
+          </Text>
         </Stack>
 
         {/* subheading */}
@@ -119,9 +122,11 @@ export default function HeroSection() {
           textAlign={{ base: "left", md: "center" }}
         >
           <Text>
-            Lorem Ipsum has been the industrys standard dummy text ever since
-            the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
+            Kami dengan bangga mempersembahkan portal Edu Tourism, tempat di
+            mana Anda dapat menjelajahi informasi terkait kegiatan kami dalam
+            mendukung sektor pariwisata pendidikan. Melalui berbagai inisiatif
+            edukatif, kami berkomitmen untuk memberikan wawasan mendalam tentang
+            industri ini
           </Text>
         </Stack>
       </Stack>
