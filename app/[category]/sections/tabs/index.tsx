@@ -20,7 +20,18 @@ import {
 } from "@chakra-ui/react";
 import { GoClock, GoProjectRoadmap } from "react-icons/go";
 
-const TabSection = () => {
+interface SilabusProps {
+  title: string;
+  subtitle: string;
+  content: string | string[];
+}
+
+interface TabSectionProps {
+  description?: string;
+  silabus?: SilabusProps[];
+}
+
+const TabSection = ({ description, silabus }: TabSectionProps) => {
   return (
     <Stack marginTop={5}>
       <Stack paddingX={10}>
@@ -49,20 +60,14 @@ const TabSection = () => {
           </TabList>
           <TabPanels>
             <TabPanel>
-              <Text>
+              <Text>{description}</Text>
+              {/* <Text marginTop={3}>
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
                 The point of using Lorem Ipsum is that it has a more-or-less
                 normal distribution of letters, as opposed to using Content
                 here, content here, making it look like readable English.
-              </Text>
-              <Text marginTop={3}>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using Content
-                here, content here, making it look like readable English.
-              </Text>
+              </Text> */}
             </TabPanel>
             <TabPanel>
               <Accordion allowMultiple>
@@ -79,15 +84,10 @@ const TabSection = () => {
                     >
                       <Stack textAlign={"left"}>
                         <Text fontWeight={"semibold"} fontSize={"18px"}>
-                          Perkenalan
+                          {silabus && silabus[0].title}
                         </Text>
                         <Text color={"primary.300"} fontSize={"14px"}>
-                          It is a long established fact that a reader will be
-                          distracted by the readable content of a page when
-                          looking at its layout. The point of using Lorem Ipsum
-                          is that it has a more-or-less normal distribution of
-                          letters, as opposed to using Content here, content
-                          here, making it look like readable English.
+                          {silabus && silabus[0].subtitle}
                         </Text>
                         <HStack
                           color={"gray.700"}
@@ -110,50 +110,11 @@ const TabSection = () => {
                   </h2>
                   <AccordionPanel
                     pb={4}
-                    fontWeight={"semibold"}
                     fontSize={"14px"}
                     paddingTop={3}
                     backgroundColor={"gray.50"}
                   >
-                    <OrderedList spacing={2}>
-                      <ListItem>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                        <Text color={"gray.700"} fontWeight={"normal"}>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration
-                          in some form, by injected humour, or randomised words
-                          which dont look even slightly believable.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        Do eiusmod tempor incididunt ut labore et dolore magna
-                        <Text color={"gray.700"} fontWeight={"normal"}>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration
-                          in some form, by injected humour, or randomised words
-                          which dont look even slightly believable.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        <Text color={"gray.700"} fontWeight={"normal"}>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration
-                          in some form, by injected humour, or randomised words
-                          which dont look even slightly believable.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation
-                        <Text color={"gray.700"} fontWeight={"normal"}>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration
-                          in some form, by injected humour, or randomised words
-                          which dont look even slightly believable.
-                        </Text>
-                      </ListItem>
-                    </OrderedList>
+                    <Text>{silabus && silabus[0].content}</Text>
                   </AccordionPanel>
                 </AccordionItem>
                 <AccordionItem
@@ -169,15 +130,10 @@ const TabSection = () => {
                     >
                       <Stack textAlign={"left"}>
                         <Text fontWeight={"semibold"} fontSize={"18px"}>
-                          Perkenalan
+                          {silabus && silabus[1].title}
                         </Text>
                         <Text color={"primary.300"} fontSize={"14px"}>
-                          It is a long established fact that a reader will be
-                          distracted by the readable content of a page when
-                          looking at its layout. The point of using Lorem Ipsum
-                          is that it has a more-or-less normal distribution of
-                          letters, as opposed to using Content here, content
-                          here, making it look like readable English.
+                          {silabus && silabus[1].subtitle}
                         </Text>
                         <HStack
                           color={"gray.700"}
@@ -200,49 +156,18 @@ const TabSection = () => {
                   </h2>
                   <AccordionPanel
                     pb={4}
-                    fontWeight={"semibold"}
                     fontSize={"14px"}
                     paddingTop={3}
                     backgroundColor={"gray.50"}
                   >
                     <OrderedList spacing={2}>
-                      <ListItem>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                        <Text color={"gray.700"} fontWeight={"normal"}>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration
-                          in some form, by injected humour, or randomised words
-                          which dont look even slightly believable.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        Do eiusmod tempor incididunt ut labore et dolore magna
-                        <Text color={"gray.700"} fontWeight={"normal"}>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration
-                          in some form, by injected humour, or randomised words
-                          which dont look even slightly believable.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        <Text color={"gray.700"} fontWeight={"normal"}>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration
-                          in some form, by injected humour, or randomised words
-                          which dont look even slightly believable.
-                        </Text>
-                      </ListItem>
-                      <ListItem>
-                        aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation
-                        <Text color={"gray.700"} fontWeight={"normal"}>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority have suffered alteration
-                          in some form, by injected humour, or randomised words
-                          which dont look even slightly believable.
-                        </Text>
-                      </ListItem>
+                      {silabus &&
+                        Array.isArray(silabus[1].content) &&
+                        silabus[1].content.map(
+                          (item: string, index: number) => (
+                            <ListItem key={index}>{item}</ListItem>
+                          )
+                        )}
                     </OrderedList>
                   </AccordionPanel>
                 </AccordionItem>

@@ -1,10 +1,17 @@
 // library style
-import { Grid, GridItem, Stack, Text } from "@chakra-ui/react";
+import { Grid, GridItem, Icon, Stack, Text } from "@chakra-ui/react";
 
 // icons
 import { FaRegFileLines } from "react-icons/fa6";
+import { IconProps } from "@chakra-ui/react";
 
-const CardBenefit = () => {
+interface CardBenefitProps {
+  title: string;
+  sub: string;
+  icon: React.ElementType;
+}
+
+const CardBenefit = ({ title, sub, icon }: CardBenefitProps) => {
   return (
     <Stack
       border={"1px"}
@@ -13,6 +20,7 @@ const CardBenefit = () => {
       padding={4}
       minWidth={"262px"}
       width={"full"}
+      minHeight={"130px"}
     >
       <Stack gap={0}>
         {/* row-1: icon and title */}
@@ -25,16 +33,14 @@ const CardBenefit = () => {
                 alignItems={"center"}
                 justifyContent={"center"}
               >
-                <Text fontSize={"22px"}>
-                  <FaRegFileLines />
-                </Text>
+                <Icon as={icon} fontSize={"22px"} />
               </Stack>
             </GridItem>
             {/* title */}
             <GridItem colSpan={4}>
               <Stack>
                 <Text fontSize={"20px"} fontWeight={"semibold"}>
-                  Manfaat
+                  {title}
                 </Text>
               </Stack>
             </GridItem>
@@ -46,7 +52,7 @@ const CardBenefit = () => {
             <GridItem colSpan={4} colStart={2}>
               <Stack>
                 <Text color={"primary.300"} fontSize={"14px"}>
-                  Pelajari dasar bahasa pemrograman, functional programming.
+                  {sub}
                 </Text>
               </Stack>
             </GridItem>

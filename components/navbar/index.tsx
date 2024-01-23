@@ -21,7 +21,9 @@ import { AiOutlineClose } from "react-icons/ai";
 // assets
 import LogoImg from "@/assets/logo.png";
 import LogoWonderfull from "@/assets/logo-wonderfull.png";
+import LogoWonderfullWhite from "@/assets/logo-wonderfull-white.png";
 import LogoEss from "@/assets/logo-ess.png";
+import LogoEssWhite from "@/assets/logo-ess-white.png";
 
 // components
 import ItemOfMenu from "./sections/itemOfMenu";
@@ -37,9 +39,12 @@ const Header = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
   const headerBgColor = useColorModeValue("white", "gray.800");
   const headerTextColor = useColorModeValue("black", "white");
-  const imageUrl: string = LogoWonderfull.src as string;
-  const imageUrl2: string = LogoEss.src as string;
+  const wonderfull: string = LogoWonderfull.src as string;
+  const wonderfullWhite: string = LogoWonderfullWhite.src as string;
+  const ess: string = LogoEss.src as string;
+  const essWhite: string = LogoEssWhite.src as string;
   const location = usePathname();
+  console.log(location);
 
   // handler isScroll?
   const handleScroll = () => {
@@ -74,15 +79,15 @@ const Header = () => {
       <HStack paddingX={10} paddingY={4} color={headerTextColor}>
         {/* logo */}
         <Link href="/">
-          <HStack gap={0}>
+          <HStack>
             <Image
               width={{ base: "30%", md: "15%" }}
-              src={imageUrl}
+              src={scrolling || location !== "/" ? wonderfull : wonderfullWhite}
               alt="logo wondefrull indonesia"
             />
             <Image
-              width={{ base: "30%", md: "15%" }}
-              src={imageUrl2}
+              width={{ base: "30%", md: "12%" }}
+              src={scrolling || location !== "/" ? ess : essWhite}
               alt="logo ess"
             />
           </HStack>
@@ -104,11 +109,20 @@ const Header = () => {
                 padding={3}
                 height={"100vh"}
               >
-                <Stack marginTop={3} marginLeft={8}>
-                  <Link href="/">
-                    <Image width="50%" src={imageUrl} alt="logo avatar" />
-                  </Link>
-                </Stack>
+                <Link href="/">
+                  <HStack marginTop={3} marginLeft={8}>
+                    <Image
+                      width="30%"
+                      src={scrolling || location ? wonderfull : wonderfullWhite}
+                      alt="logo wonderfull indonesia"
+                    />
+                    <Image
+                      width="30%"
+                      src={scrolling || location ? ess : essWhite}
+                      alt="logo wonderfull indonesia"
+                    />
+                  </HStack>
+                </Link>
                 <Stack
                   gap={8}
                   color={
@@ -118,29 +132,41 @@ const Header = () => {
                   }
                   marginTop={10}
                 >
-                  <ItemOfMenu title="Home" isMobile />
-                  <ItemOfMenu title="About" isMobile />
+                  <ItemOfMenu title="Home" path="/#hero" to="hero" isMobile />
+                  <ItemOfMenu
+                    title="About"
+                    path="/#about"
+                    to="about"
+                    isMobile
+                  />
+                  <ItemOfMenu title="About" path="/#team" to="team" isMobile />
                   <ItemOfAccordion />
-                  <ItemOfMenu title="Contact" isMobile />
+                  <ItemOfMenu
+                    title="Contact"
+                    path="/#footer"
+                    to="footer"
+                    isMobile
+                  />
                 </Stack>
               </Stack>
             ) : null}
 
             {/* button to open/close menu item in mobile size */}
-            <Button
-              alignItems="center"
-              onClick={toggleMenu}
-              backgroundColor={"transparent"}
-              color={
-                isMenuOpen || scrolling || location !== "/"
-                  ? "blackAlpha.800"
-                  : "white"
-              }
-              fontSize={"25px"}
-              _hover={{ backgroundColor: "transparent", color: "#7879F1" }}
-            >
-              {isMenuOpen ? <AiOutlineClose /> : <RxHamburgerMenu />}
-            </Button>
+            <Stack>
+              <Button
+                alignItems="center"
+                onClick={toggleMenu}
+                backgroundColor={"transparent"}
+                color={
+                  isMenuOpen || scrolling || location !== "/"
+                    ? "blackAlpha.800"
+                    : "white"
+                }
+                _hover={{ backgroundColor: "transparent", color: "#7879F1" }}
+              >
+                {isMenuOpen ? <AiOutlineClose /> : <RxHamburgerMenu />}
+              </Button>
+            </Stack>
           </>
         ) : (
           // navbar components in tab or desktop size
@@ -148,10 +174,11 @@ const Header = () => {
             gap={8}
             color={scrolling || location !== "/" ? "black" : "white"}
           >
-            <ItemOfMenu title="Home" />
-            <ItemOfMenu title="About" />
+            <ItemOfMenu title="Home" path="/#hero" to="hero" />
+            <ItemOfMenu title="About" path="/#about" to="about" />
+            <ItemOfMenu title="Team" path="/#team" to="team" />
             <ItemOfDropdown />
-            <ItemOfMenu title="Contact" />
+            <ItemOfMenu title="Contact" path="/#footer" to="footer" />
           </HStack>
         )}
       </HStack>

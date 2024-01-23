@@ -16,7 +16,7 @@ const ModuleDetailPage = () => {
   return (
     <Stack>
       <HeroSection {...data} />
-      <TabSection />
+      <TabSection {...data} />
     </Stack>
   );
 };

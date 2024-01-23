@@ -20,17 +20,36 @@ import { PiMedal } from "react-icons/pi";
 // component
 import CardBenefit from "./cardBenefit";
 
+// data
+import { benefit } from "../../data";
+
 interface HeroSectionProps {
   title?: string;
   imgSrc?: any;
+  heroContent?: string;
+  description?: string;
+  file?: string;
+  id?: string;
 }
 
-const HeroSection = ({ title, imgSrc }: HeroSectionProps) => {
+interface CardBenefitProps {
+  title: string;
+  sub: string;
+  icon: React.ElementType;
+}
+
+const HeroSection = ({
+  title,
+  imgSrc,
+  heroContent,
+  file,
+  id,
+}: HeroSectionProps) => {
   const handleDownload = () => {
-    const fileUrl = "https://homepage-chi-six-45.vercel.app/modul.pdf";
+    const fileUrl = typeof file === "string" ? file : "https://default-url.com";
     const link = document.createElement("a");
     link.href = fileUrl;
-    link.setAttribute("download", "modul.pdf");
+    link.setAttribute("download", `modul-${id}.pdf`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -97,11 +116,7 @@ const HeroSection = ({ title, imgSrc }: HeroSectionProps) => {
               <GridItem colSpan={{ base: 0, md: 2, lg: 3 }}>
                 <Stack width={{ base: "full", md: "90%" }}>
                   <Heading>{title}</Heading>
-                  <Text>
-                    Pelajari dasar bahasa pemrograman, functional programming,
-                    object-oriented programming (OOP), serta concurrency dengan
-                    menggunakan Kotlin.
-                  </Text>
+                  <Text>{heroContent}</Text>
                 </Stack>
               </GridItem>
 
@@ -152,18 +167,11 @@ const HeroSection = ({ title, imgSrc }: HeroSectionProps) => {
                 }}
                 gap={3}
               >
-                <GridItem>
-                  <CardBenefit />
-                </GridItem>
-                <GridItem>
-                  <CardBenefit />
-                </GridItem>
-                <GridItem>
-                  <CardBenefit />
-                </GridItem>
-                <GridItem>
-                  <CardBenefit />
-                </GridItem>
+                {benefit.map((item: CardBenefitProps, index: number) => (
+                  <GridItem key={index}>
+                    <CardBenefit {...item} />
+                  </GridItem>
+                ))}
               </Grid>
             </Stack>
           </Stack>

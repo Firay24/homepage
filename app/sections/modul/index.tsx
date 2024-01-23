@@ -21,12 +21,13 @@ const ModulSection = () => {
       gap={5}
     >
       <Heading textAlign={{ base: "center", md: "left" }} fontSize={"30px"}>
-        Our Featured and Past Project
+        Our Program and Study Modules
       </Heading>
       <Button
         backgroundColor="primary.100"
         _hover={{ backgroundColor: "primary.200" }}
         color={"white"}
+        rounded="full"
       >
         Download
       </Button>

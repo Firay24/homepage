@@ -62,7 +62,7 @@ export default function HeroSection() {
     ),
   };
   return (
-    <Stack position="relative">
+    <Stack position="relative" id="hero">
       {/* image sider components */}
       <Slider
         data-current-slide={sliderRef.current}
@@ -105,7 +105,7 @@ export default function HeroSection() {
       >
         {/* heading */}
         <Stack
-          width={{ base: "90%", md: "50%" }}
+          width={{ base: "90%", md: "90%", lg: "60%" }}
           textAlign={{ base: "left", md: "center" }}
           fontSize={{ base: "20px", md: "35px" }}
           fontWeight={"bold"}
