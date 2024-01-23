@@ -20,6 +20,8 @@ import { AiOutlineClose } from "react-icons/ai";
 
 // assets
 import LogoImg from "@/assets/logo.png";
+import LogoWonderfull from "@/assets/logo-wonderfull.png";
+import LogoEss from "@/assets/logo-ess.png";
 
 // components
 import ItemOfMenu from "./sections/itemOfMenu";
@@ -27,6 +29,7 @@ import ItemOfAccordion from "./sections/itemOfAccordion";
 import ItemOfDropdown from "./sections/itemOfDropdown";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { HiRectangleStack } from "react-icons/hi2";
 
 const Header = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -34,7 +37,8 @@ const Header = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
   const headerBgColor = useColorModeValue("white", "gray.800");
   const headerTextColor = useColorModeValue("black", "white");
-  const imageUrl: string = LogoImg.src as string;
+  const imageUrl: string = LogoWonderfull.src as string;
+  const imageUrl2: string = LogoEss.src as string;
   const location = usePathname();
 
   // handler isScroll?
@@ -70,11 +74,18 @@ const Header = () => {
       <HStack paddingX={10} paddingY={4} color={headerTextColor}>
         {/* logo */}
         <Link href="/">
-          <Image
-            width={{ base: "50%", md: "250px" }}
-            src={imageUrl}
-            alt="logo avatar"
-          />
+          <HStack gap={0}>
+            <Image
+              width={{ base: "30%", md: "15%" }}
+              src={imageUrl}
+              alt="logo wondefrull indonesia"
+            />
+            <Image
+              width={{ base: "30%", md: "15%" }}
+              src={imageUrl2}
+              alt="logo ess"
+            />
+          </HStack>
         </Link>
 
         <Spacer />
