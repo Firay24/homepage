@@ -10,9 +10,10 @@ import ButtonIcons from "./buttonIcons";
 interface CardTeamProps {
   name: string;
   email: string;
+  desc: string;
 }
 
-const CardTeam = ({ name, email }: CardTeamProps) => {
+const CardTeam = ({ name, email, desc }: CardTeamProps) => {
   const imageUrl: string = profilImg.src as string;
   return (
     <Stack
@@ -22,7 +23,7 @@ const CardTeam = ({ name, email }: CardTeamProps) => {
       padding={8}
       width={"300px"}
       height={"auto"}
-      minHeight={"320px"}
+      minHeight={"280px"}
       cursor={"pointer"}
       _hover={{ backgroundColor: "gray.50" }}
     >
@@ -40,8 +41,7 @@ const CardTeam = ({ name, email }: CardTeamProps) => {
         </HStack>
         <Stack marginTop={2}>
           <Text fontSize={"14px"} color={"primary.300"}>
-            Lorem ipsum dolor sit amet consecte adipiscing elit amet hendrerit
-            pretium nulla sed enim iaculis mi.{" "}
+            {desc}
           </Text>
         </Stack>
       </Stack>

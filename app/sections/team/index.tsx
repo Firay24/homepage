@@ -7,6 +7,7 @@ import CardTeam from "./cardTeam";
 interface CardTeamProps {
   name: string;
   email: string;
+  desc: string;
 }
 
 const TeamSections = () => {
@@ -14,18 +15,22 @@ const TeamSections = () => {
     {
       name: "Prof. Dr. Augustina Asih Rumanti, S.T., M.T.",
       email: "augusstinaar@gmail.com",
+      desc: "Lecturer and reasearcher in industrial engineering",
     },
     {
       name: "Artamevia Salsabila Rizaldi, S.T., M.T.",
       email: "artameviasalsabila@gmail.com",
+      desc: "Lecturer and reasearcher in industrial engineering",
     },
     {
       name: "Mia Amelia, S.T., M.T.",
       email: "mia.amelia08@gmail.com",
+      desc: "Lecturer and reasearcher in industrial engineering",
     },
     {
       name: "Frisca Alifia Alia Kamilia",
-      email: "friscaalifia5@gmail.com ",
+      email: "friscaalifia5@gmail.com",
+      desc: "student in information system",
     },
   ];
   return (
@@ -50,22 +55,6 @@ const TeamSections = () => {
           ))}
         </Flex>
       </Stack>
-      {/* <Grid
-        templateColumns={{
-          base: "repeat(1, 1fr)",
-          md: "repeat(2, 1fr)",
-          lg: "repeat(3, 1fr)",
-        }}
-        marginTop={8}
-        gap={5}
-        paddingX={10}
-      >
-        {members.map((item: CardTeamProps, index: number) => (
-          <GridItem key={index}>
-            <CardTeam {...item} />
-          </GridItem>
-        ))}
-      </Grid> */}
     </Stack>
   );
 };

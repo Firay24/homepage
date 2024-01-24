@@ -15,7 +15,10 @@ const ItemOfMenu = ({ title, isMobile = false, path, to }: ItemOfMenuProps) => {
   const location = usePathname();
   return (
     <Stack
-      _hover={{ backgroundColor: isMobile ? "#F5F5F5" : "#7879F1" }}
+      _hover={{
+        backgroundColor: isMobile ? "#F5F5F5" : "#196D8F",
+        color: "white",
+      }}
       padding={2}
       rounded={"md"}
       width={isMobile ? "100%" : "auto"}

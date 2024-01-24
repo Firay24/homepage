@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <Stack>
       <HeroSection />
-      <PointSections />
+      {/* <PointSections /> */}
       <ModulSection />
       <AboutSection />
       <TeamSections />

@@ -1,5 +1,5 @@
 // library style
-import { Button, Grid, GridItem, Heading, Stack } from "@chakra-ui/react";
+import { Button, Grid, GridItem, Heading, Stack, Text } from "@chakra-ui/react";
 
 // components
 import CardModul from "./cardModul";
@@ -23,6 +23,16 @@ const ModulSection = () => {
       <Heading textAlign={{ base: "center", md: "left" }} fontSize={"30px"}>
         Our Program and Study Modules
       </Heading>
+      <Text textAlign="center" paddingX={5}>
+        "Selamat datang di situs resmi Edu-tourism Laboratorium Enterprise
+        System and Solution Universitas Telkom. Sebuah tempat di mana
+        petualangan pengetahuan bertautan erat dengan pesona alam yang memukau.
+        Bersama-sama, kita akan mengarungi perjalanan edukatif yang melibatkan
+        diri dalam keindahan alam dan kearifan lokal, menciptakan pengalaman
+        belajar yang tak terlupakan. Mari kita terus meresapi kekayaan
+        Banyuwangi melalui lensa pendidikan dan pariwisata yang menyeluruh.
+        Selamat menjelajah! 🌿📚✨";
+      </Text>
       <Button
         backgroundColor="primary.100"
         _hover={{ backgroundColor: "primary.200" }}
