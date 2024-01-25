@@ -24,14 +24,14 @@ const ModulSection = () => {
         Our Program and Study Modules
       </Heading>
       <Text textAlign="center" paddingX={5}>
-        "Selamat datang di situs resmi Edu-tourism Laboratorium Enterprise
-        System and Solution Universitas Telkom. Sebuah tempat di mana
-        petualangan pengetahuan bertautan erat dengan pesona alam yang memukau.
+        Selamat datang di situs resmi Edu-tourism Laboratorium Enterprise System
+        and Solution Universitas Telkom. Sebuah tempat di mana petualangan
+        pengetahuan bertautan erat dengan pesona alam yang memukau.
         Bersama-sama, kita akan mengarungi perjalanan edukatif yang melibatkan
         diri dalam keindahan alam dan kearifan lokal, menciptakan pengalaman
         belajar yang tak terlupakan. Mari kita terus meresapi kekayaan
         Banyuwangi melalui lensa pendidikan dan pariwisata yang menyeluruh.
-        Selamat menjelajah! 🌿📚✨";
+        Selamat menjelajah! 🌿📚✨
       </Text>
       <Button
         backgroundColor="primary.100"
