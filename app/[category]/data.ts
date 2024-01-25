@@ -35,7 +35,7 @@ export const dataItems = [
     id: "sd",
     title: "Modul Belajar SD",
     imgSrc: imgSD,
-    file: "https://homepage-chi-six-45.vercel.app/modul-sd.pdf",
+    file: "https://httplabrisetess.com//modul-sd.pdf",
     heroContent:
       "Program Edu-Tourism untuk siswa Sekolah Dasar (SD) di Banyuwangi dirancang untuk mengajak mereka menjelajahi keindahan serta keunikan budaya dan alam lokal",
     description:
@@ -64,7 +64,7 @@ export const dataItems = [
     id: "smp",
     title: "Modul Belajar SMP",
     imgSrc: imgSMP,
-    file: "https://homepage-chi-six-45.vercel.app/modul-sd.pdf",
+    file: "https://httplabrisetess.com//modul-sd.pdf",
     heroContent:
       "Program Edu-Tourism untuk siswa Sekolah Menengah Pertama (SMP) di Banyuwangi dirancang untuk mengajak mereka menjelajahi keindahan serta keunikan budaya dan alam lokal",
     description:
@@ -94,7 +94,7 @@ export const dataItems = [
     id: "sma",
     title: "Modul Belajar SMA",
     imgSrc: imgSMA,
-    file: "https://homepage-chi-six-45.vercel.app/modul-sma.pdf",
+    file: "https://httplabrisetess.com//modul-sma.pdf",
     heroContent:
       "Program Edu-Tourism untuk siswa Sekolah Menengah Atas (SMA) di Banyuwangi dirancang untuk mengajak mereka menjelajahi keindahan serta keunikan budaya dan alam lokal",
     description:
