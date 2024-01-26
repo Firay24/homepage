@@ -3,9 +3,8 @@ import imgSMP from "@/assets/smp.jpg";
 import imgSMA from "@/assets/sma.jpg";
 import { AiOutlineMonitor } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { MdBubbleChart, MdOutlineTravelExplore } from "react-icons/md";
-import { FaMountainSun, FaPersonRunning, FaCircleCheck } from "react-icons/fa6";
-import { HiMiniPaintBrush } from "react-icons/hi2";
+import { MdBubbleChart } from "react-icons/md";
+import { FaCircleCheck } from "react-icons/fa6";
 
 export const benefit = [
   {
@@ -35,7 +34,7 @@ export const dataItems = [
     id: "sd",
     title: "Modul Belajar SD",
     imgSrc: imgSD,
-    file: "https://httplabrisetess.com//modul-sd.pdf",
+    file: "https://labrisetess.com/modul-sd.pdf",
     heroContent:
       "Program Edu-Tourism untuk siswa Sekolah Dasar (SD) di Banyuwangi dirancang untuk mengajak mereka menjelajahi keindahan serta keunikan budaya dan alam lokal",
     description:
@@ -64,7 +63,7 @@ export const dataItems = [
     id: "smp",
     title: "Modul Belajar SMP",
     imgSrc: imgSMP,
-    file: "https://httplabrisetess.com//modul-sd.pdf",
+    file: "https://labrisetess.com/modul-sd.pdf",
     heroContent:
       "Program Edu-Tourism untuk siswa Sekolah Menengah Pertama (SMP) di Banyuwangi dirancang untuk mengajak mereka menjelajahi keindahan serta keunikan budaya dan alam lokal",
     description:
@@ -94,7 +93,7 @@ export const dataItems = [
     id: "sma",
     title: "Modul Belajar SMA",
     imgSrc: imgSMA,
-    file: "https://httplabrisetess.com//modul-sma.pdf",
+    file: "https://labrisetess.com/modul-sma.pdf",
     heroContent:
       "Program Edu-Tourism untuk siswa Sekolah Menengah Atas (SMA) di Banyuwangi dirancang untuk mengajak mereka menjelajahi keindahan serta keunikan budaya dan alam lokal",
     description:
