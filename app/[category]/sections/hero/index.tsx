@@ -1,3 +1,4 @@
+"use client";
 // library style
 import {
   Box,

@@ -1,12 +1,4 @@
-import {
-  Divider,
-  Grid,
-  GridItem,
-  HStack,
-  Spacer,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Divider, Grid, GridItem, Stack, Text } from "@chakra-ui/react";
 import LogoImg from "@/assets/logo-ess-white.png";
 import { Image } from "@chakra-ui/react";
 import SosmedIcons from "./sosmedIcons";
@@ -14,12 +6,7 @@ import SosmedIcons from "./sosmedIcons";
 const FooterSection = () => {
   const imgUrl: string = LogoImg.src as string;
   return (
-    <Stack
-      backgroundColor={"primary.100"}
-      marginTop={20}
-      padding={10}
-      id="footer"
-    >
+    <Stack backgroundColor={"#155D7A"} marginTop={20} padding={10} id="footer">
       <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}>
         <GridItem>
           <Stack>

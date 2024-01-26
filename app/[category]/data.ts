@@ -63,7 +63,7 @@ export const dataItems = [
     id: "smp",
     title: "Modul Belajar SMP",
     imgSrc: imgSMP,
-    file: "https://labrisetess.com/modul-sd.pdf",
+    file: "https://labrisetess.com/modul-smp.pdf",
     heroContent:
       "Program Edu-Tourism untuk siswa Sekolah Menengah Pertama (SMP) di Banyuwangi dirancang untuk mengajak mereka menjelajahi keindahan serta keunikan budaya dan alam lokal",
     description:

@@ -139,7 +139,7 @@ const Header = () => {
                     to="about"
                     isMobile
                   />
-                  <ItemOfMenu title="About" path="/#team" to="team" isMobile />
+                  <ItemOfMenu title="Team" path="/#team" to="team" isMobile />
                   <ItemOfAccordion />
                   <ItemOfMenu
                     title="Contact"

@@ -19,6 +19,7 @@ const ModulSection = () => {
       justifyContent={"center"}
       alignItems={"center"}
       gap={5}
+      paddingX={5}
     >
       <Heading textAlign={{ base: "center", md: "left" }} fontSize={"30px"}>
         Our Program and Study Modules

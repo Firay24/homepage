@@ -107,7 +107,7 @@ export default function HeroSection() {
         <Stack
           width={{ base: "90%", md: "90%", lg: "60%" }}
           textAlign={{ base: "left", md: "center" }}
-          fontSize={{ base: "20px", md: "35px" }}
+          fontSize={{ base: "25px", md: "35px" }}
           fontWeight={"bold"}
         >
           <Text>
@@ -120,6 +120,7 @@ export default function HeroSection() {
         <Stack
           width={{ base: "90%", md: "60%" }}
           textAlign={{ base: "left", md: "center" }}
+          fontSize={{ base: "14px", md: "16px" }}
         >
           <Text>
             Kami dengan bangga mempersembahkan portal Edu Tourism, tempat di

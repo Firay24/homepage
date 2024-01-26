@@ -34,7 +34,13 @@ const TeamSections = () => {
     },
   ];
   return (
-    <Stack marginTop={20} alignItems={"center"} id="team">
+    <Stack
+      marginTop={20}
+      alignItems={"center"}
+      id="team"
+      paddingX={5}
+      textAlign="center"
+    >
       <Heading>Meet our team members</Heading>
       <Stack
         width={{ base: "80%", md: "40%" }}
